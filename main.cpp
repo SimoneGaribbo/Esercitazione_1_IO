@@ -1,10 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-#include <numbers>
-#include <cmath>
 
-double function(double n) {
+double trans (double n) {
 	double a = 3;
 	double b = 4;
 	double n_transf = (n-1)*(a/b)-1;
@@ -32,7 +30,7 @@ int main()
 	int i = 1;
 	
 	while (file>>n) {
-		n = function(n);
+		n = trans(n);
 		sum = sum+n;
 		mean = sum/i;
 		result << i << " " << mean << std::endl;
